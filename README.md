@@ -2,7 +2,7 @@
 Amino Wall Spamer bot/Бот для спама стены в амино!
 This bot created for spam walls in amino/Этот бот создан для того чтобы спамить стены в амино
 для установки бота нужно ввести
-Termux
+# Termux
 apt update
 apt upgrade
 pip install colorama
