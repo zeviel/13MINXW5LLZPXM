@@ -16,7 +16,9 @@ import amino
 #инпут почты и пароля чтобы бот зашел в аккаунт
 email=input("Email/Почта:")
 password=input("Password/Пароль:")
-comid=input('Type community id/Введите id сообщества:')
+for name, id in zip(client.sub_clients().name, client.sub_clients().comId):
+    print(f"{name}: {id}")
+comid = input("Выберите сообщество(id): ")
 client = amino.Client()
 client.login(email=email, password=password)
 sub_client = amino.SubClient(comId=comid,profile=client.profile)
