@@ -6,7 +6,7 @@ This bot created for spam walls in amino/Этот бот создан для т�
 - apt update
 - apt upgrade
 - pip install colorama
-- pip install amino.py
+- pip install amino.py==1.2.17
 - apt install git
 - git clone https://github.com/LilZevi/AminoWallSpam
 - Для запуска/For starting
