@@ -1,32 +1,21 @@
-import amino
-import asyncio
+import AminoLab
 import pyfiglet
 from colorama import init, Fore, Back, Style
-init()
+init(
 print(Fore.CYAN)
 print("""Script by Lil Zevi
 Github : https://github.com/LilZevi""")
 print(pyfiglet.figlet_format("aminowallspam", font="stop"))
+client = AminoLab.Client()
+email = input("Email >> ")
+password = input("Password >> ")
+client.auth(email=email, password=password)
+comment = input("Comment >> ")
+user_info = client.get_from_link(input("User Link >> "))
+user_id = user_info.object_Id; ndc_Id = user_info.ndc_Id
 
-async def main():
-	client = amino.Client()
-	email = input("Email >> ")
-	password = input("Password >> ")
-	await client.login(email=email, password=password)
-	clients = await client.sub_clients(start=0, size=100)
-	for x, name in enumerate(clients.name, 1):
-		print(f"{x}.{name}")
-	communityid = clients.comId[int(input("Select the community >> "))-1]
-	sub_client = await amino.SubClient(comId=communityid, profile=client.profile)
-	userlink = input("User Link >> ")
-	user_info = await client.get_from_code(userlink)
-	userId = user_info.objectId
-	comment = input("Message >> ")
-	while True:
-		try:
-			await sub_client.comment(message=comment, userId=userId)
-			print("WallComment Sended")
-		except:
-			pass
-
-asyncio.get_event_loop().run_until_complete(main())
+while True:
+	try:
+		client.submit_comment(ndc_Id=ndc_Id, message=comment, user_Id=user_id)
+		print("Sended Comment")
+	except Exception as e:	print(e)
