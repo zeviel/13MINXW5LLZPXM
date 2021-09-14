@@ -1,7 +1,7 @@
 import AminoLab
 import pyfiglet
 from colorama import init, Fore, Back, Style
-init(
+init()
 print(Fore.CYAN)
 print("""Script by Lil Zevi
 Github : https://github.com/LilZevi""")
