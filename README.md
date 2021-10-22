@@ -8,7 +8,7 @@ AminoWallSpam/User Wall Comment Spam Bot For Amino
 - pip install AminoLab
 - pip install pyfiglet
 - apt install git
-- git clone https://github.com/LilZevi/AminoWallSpam
+- git clone https://github.com/deluvsushi/AminoWallSpam
 - Для запуска/For starting
 - cd AminoWallSpam
 - python AminoWallSpam.py
