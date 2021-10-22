@@ -3,8 +3,8 @@ import pyfiglet
 from colorama import init, Fore, Back, Style
 init()
 print(Fore.CYAN)
-print("""Script by Lil Zevi
-Github : https://github.com/LilZevi""")
+print("""Script by deluvsushi
+Github : https://github.com/deluvsushi""")
 print(pyfiglet.figlet_format("aminowallspam", font="stop"))
 client = AminoLab.Client()
 email = input("Email >> ")
