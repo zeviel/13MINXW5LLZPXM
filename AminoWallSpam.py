@@ -1,21 +1,25 @@
-import AminoLab
-import pyfiglet
-from colorama import init, Fore, Back, Style
+import amino
+from pyfiglet import figlet_format
+from colorama import init, Fore, Style
 init()
-print(Fore.CYAN)
-print("""Script by deluvsushi
-Github : https://github.com/deluvsushi""")
-print(pyfiglet.figlet_format("aminowallspam", font="stop"))
-client = AminoLab.Client()
-email = input("Email >> ")
-password = input("Password >> ")
-client.auth(email=email, password=password)
-comment = input("Comment >> ")
-user_info = client.get_from_link(input("User Link >> "))
-user_id = user_info.object_Id; ndc_Id = user_info.ndc_Id
-
+print(
+    f"""{Fore.CYAN}
+Script by deluvsushi
+Github : https://github.com/deluvsushi"""
+)
+print(figlet_format("aminowallspam", font="stop"))
+client = amino.Client()
+email = input("-- Email::: ")
+password = input("-- Password::: ")
+client.login(email=email, password=password)
+link_info = client.get_from_code(input("-- User link::: ")).json["linkInfoV2"]
+com_id = link_info["extensions"]["linkInfo"]["ndcId"]
+user_id = link_info["extensions"]["linkInfo"]["objectId"]
+sub_client = amino.SubClient(comId=com_id, profile=client.profile)
+message = input("-- Message::: ")
 while True:
 	try:
-		client.submit_comment(ndc_Id=ndc_Id, message=comment, user_Id=user_id)
-		print("Sended Comment")
-	except Exception as e:	print(e)
+		sub_client.comment(userId=user_id, message=message)
+		print("-- Comment is sent...")
+	except Exception as e:
+		print(e)
