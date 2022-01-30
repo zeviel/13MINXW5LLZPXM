@@ -12,7 +12,7 @@ client = amino.Client()
 email = input("-- Email::: ")
 password = input("-- Password::: ")
 client.login(email=email, password=password)
-link_info = client.get_from_code(input("-- User link::: ")).json["linkInfoV2"]
+link_info = client.get_from_code(input("-- User link::: ")).json
 com_id = link_info["extensions"]["linkInfo"]["ndcId"]
 user_id = link_info["extensions"]["linkInfo"]["objectId"]
 sub_client = amino.SubClient(comId=com_id, profile=client.profile)
