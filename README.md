@@ -1,5 +1,5 @@
-# AminoWallSpam
-AminoWallSpam/User Wall Comment Spam Bot For Amino
+# 13MINXW5LLZPXM
+User wall spam bot for amino
 
 ## Termux
 ```shell
@@ -9,7 +9,7 @@ AminoWallSpam/User Wall Comment Spam Bot For Amino
 - pip install colorama
 - pip install pyfiglet
 - apt install git
-- git clone https://github.com/deluvsushi/AminoWallSpam
-- cd AminoWallSpam
-- python AminoWallSpam.py
+- git clone https://github.com/deluvsushi/13MINXW5LLZPXM
+- cd 13MINXW5LLZPXM
+- python 13MINXW5LLZPXM.py
 ```
