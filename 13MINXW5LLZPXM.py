@@ -4,8 +4,8 @@ from colorama import init, Fore, Style
 init()
 print(
     f"""{Fore.CYAN}
-Script by deluvsushi
-Github : https://github.com/deluvsushi"""
+Script by zeviel
+Github : https://github.com/zeviel"""
 )
 print(figlet_format("13MINXW5LLZPXM", font="stop"))
 client = amino.Client()
