@@ -9,7 +9,7 @@ User wall spam bot for amino
 - pip install colorama
 - pip install pyfiglet
 - apt install git
-- git clone https://github.com/deluvsushi/13MINXW5LLZPXM
+- git clone https://github.com/zeviel/13MINXW5LLZPXM
 - cd 13MINXW5LLZPXM
 - python 13MINXW5LLZPXM.py
 ```
